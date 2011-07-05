@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @screen.name %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @screen.description %>
+</p>
+
+
+<%= link_to 'Edit', edit_screen_path(@screen) %> |
+<%= link_to 'Back', screens_path %>
