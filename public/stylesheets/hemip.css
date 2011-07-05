@@ -1,0 +1,24 @@
+body {
+	margin:50px 0px; padding:0px;
+	text-align:center;
+}
+	
+#content {
+	width:500px;
+	margin:0px auto;
+	text-align:left;
+	padding:15px;
+	border:1px dashed #333;
+	background-color:#eee;
+}
+
+label {
+	margin-left: 50px;
+text-align: right;
+}
+
+input {
+	float: right;
+	margin-right: 60px;
+	
+}
