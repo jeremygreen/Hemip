@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  title: MyString
+  description: MyString
+  found: 2011-07-05
+  screen_id: 1
+  resolved: false
+
+two:
+  title: MyString
+  description: MyString
+  found: 2011-07-05
+  screen_id: 1
+  resolved: false

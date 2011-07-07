@@ -60,7 +60,7 @@ class BugsController < ApplicationController
 
     respond_to do |format|
       if @bug.update_attributes(params[:bug])
-        format.html { redirect_to(@bug, :notice => 'Bug was successfully updated.') }
+        format.html { redirect_to(bugs_path, :notice => 'Bug was successfully updated.') }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }

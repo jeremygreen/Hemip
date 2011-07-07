@@ -1,21 +1,15 @@
-<h1>Listing screens</h1>
+<h1>Screens</h1>
 
-<table>
+<table width="100%">
   <tr>
     <th>Name</th>
-    <th>Description</th>
-    <th></th>
-    <th></th>
     <th></th>
   </tr>
 
 <% @screens.each do |screen| %>
-  <tr>
-    <td><%= screen.name %></td>
-    <td><%= screen.description %></td>
-    <td><%= link_to 'Show', screen %></td>
-    <td><%= link_to 'Edit', edit_screen_path(screen) %></td>
-    <td><%= link_to 'Destroy', screen, :confirm => 'Are you sure?', :method => :delete %></td>
+  <tr class="<%= cycle("even", "odd") %>">
+    <td><%= link_to screen.name, edit_screen_path(screen) %></td>
+    <td><%= link_to 'Delete', screen, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>

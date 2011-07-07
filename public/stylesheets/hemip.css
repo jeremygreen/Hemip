@@ -4,7 +4,7 @@ body {
 }
 	
 #content {
-	width:500px;
+	width:700px;
 	margin:0px auto;
 	text-align:left;
 	padding:15px;
@@ -14,11 +14,26 @@ body {
 
 label {
 	margin-left: 50px;
-text-align: right;
+    text-align: right;
 }
 
 input {
 	float: right;
 	margin-right: 60px;
 	
+}
+
+th {
+	background-color: #999;
+	font-weight: normal;
+	font-size: 14px;
+	color: #fff;
+}
+
+.live {
+	background-color: #C2DFFF;
+}
+
+.dead {
+	background-color: #B5EAAA;	
 }

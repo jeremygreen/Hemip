@@ -1,25 +1,28 @@
-<h1>Listing bugs</h1>
+<h1>Bugs</h1>
 
-<table>
+<table width="100%">
   <tr>
     <th>Title</th>
     <th>Found</th>
     <th>Screen</th>
+    <th>Priority</th>
     <th>Resolved</th>
-    <th></th>
-    <th></th>
     <th></th>
   </tr>
 
 <% @bugs.each do |bug| %>
-  <tr>
-    <td><%= bug.title %></td>
+  <tr class="<%= cycle("even", "odd") %>">
+	<% if bug.resolved == true %>
+	  <tr class="dead") >
+	<% else %>
+	  <tr class="live") >
+	<% end %>
+    <td><%= link_to bug.title, edit_bug_path(bug) %></td>
     <td><%= bug.found %></td>
-    <td><%= bug.screen.title %></td>
-    <td><%= bug.resolved %></td>
-    <td><%= link_to 'Show', bug %></td>
-    <td><%= link_to 'Edit', edit_bug_path(bug) %></td>
-    <td><%= link_to 'Destroy', bug, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= bug.screen.name %></td>
+    <td><%= bug.priority %></td>
+    <td><%= render_boolean(bug.resolved) %></td>
+    <td><%= link_to 'Delete', bug, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>

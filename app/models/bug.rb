@@ -1,3 +1,3 @@
 class Bug < ActiveRecord::Base
-  has_many :screen
+  belongs_to :screen
 end

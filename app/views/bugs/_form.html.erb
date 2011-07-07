@@ -28,6 +28,10 @@
     <%= f.collection_select(:screen_id, Screen.all, :id, :name) %>
   </div>
   <div class="field">
+    <%= f.label :priority %>:
+    <%= f.select :priority, options_for_select(['Critical','High','Medium','Low']) %>
+  </div>
+  <div class="field">
     <%= f.label :resolved %>:
     <%= f.check_box :resolved %>
   </div>
